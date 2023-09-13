@@ -27,10 +27,15 @@ const Home = () => {
   const [employees, setEmployees] = useState(mockEmployees);
   const [sector, setSector] = useState();
 
+
   return (
     <>
       <div className='Hero'>
-        <h1>Generation Thailand<br />React - Assessment</h1>
+        <h1>Generation Thailand<br />
+        { sector === 'admin' && 'Home - Admin Sector'}
+        { sector === 'user' && 'Home - User Sector' }
+        { sector != 'admin' && sector != 'user' && 'React - Assessment' }
+        </h1>
         <div className='toggle'>
           <button
             type="button"
