@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import User from './User';
+import Admin from './Admin'
+
 const mockEmployees = [
   {
     id: 0,
@@ -17,14 +21,39 @@ const mockEmployees = [
     lastname: "lord",
     position: "Designer"
   },
-]
+];
 
 const Home = () => {
+  const [employees, setEmployees] = useState(mockEmployees);
+  const [sector, setSector] = useState();
 
   return (
-    <div>
-
-    </div>
+    <>
+      <div className='Hero'>
+        <h1>Generation Thailand<br />React - Assessment</h1>
+        <div className='toggle'>
+          <button
+            type="button"
+            value="user"
+            onClick={e => setSector(e.target.value)}
+          >User Home Sector</button>
+          <button
+            type="button"
+            value="admin"
+            onClick={e => setSector(e.target.value)}
+          >Admin Home Sector</button>
+        </div>
+      </div>
+      <main>
+      {   
+      sector === 'admin' ? 
+        <Admin employees={employees} setEmployees={setEmployees} /> :
+      sector === 'user' ? 
+        <User employees={employees} /> :
+        <div id="greet">Hello, would you like some coffee?</div>
+      }
+      </main>
+    </>
   )
 }
 

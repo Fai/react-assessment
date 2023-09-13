@@ -1,0 +1,74 @@
+.Navbar {
+    display:flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid black;
+}
+
+.Navbar > * {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 24px;
+}
+
+.Hero h1{
+    text-align: center;
+}
+.toggle {
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Admin, .User {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+form {
+    margin: 20px 0px;
+}
+
+form input {
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    align-items: center;
+    margin-top: 20px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+#deleteAll {
+    margin: 10px;
+    width: 100px;
+    align-self: self-end;
+}
+
+table span {
+    color: red;
+}
+
+.Owner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#greet {
+    margin: 50px;
+}
